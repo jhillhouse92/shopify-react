@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+    </head><body id="content" class="page-home-index">{{ content_for_header }}
+
+    {{ 'vendor.bundle.js' | asset_url | script_tag }}
+
+
+
+
+    {{ content_for_layout }}
+
+    <div class="react-container-app"></div>
+    
+
+    {{ 'index.js' | asset_url | script_tag }}
+
+   
+
+
+
+</body></html>

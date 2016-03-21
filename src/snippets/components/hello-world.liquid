@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    /* everything is relative to crisper-tmp/** folder, so this is in crisper-tmp/snippets/ 
+     * because we flatten all liquid snippet and templates files to only include 1-level parent, shopify requires no folders in snippets / templates
+     */
+    import React, { Component } from 'react';
+    import ReactDOM from 'react-dom';
+
+    import HomeGreeting from '../../components/home_greeting';
+
+
+    class App2 extends Component {
+        constructor(props) {
+            super(props);
+
+            this.state = {};
+        }
+
+        render() {
+            return ( < HomeGreeting page = {
+                    this.props.page
+                }
+                />
+            );
+        }
+    }
+
+    ReactDOM.render(React.createElement(App2, {
+        page: "{{ current_page }}"
+    }), document.querySelector('.app2'));
+</script>
